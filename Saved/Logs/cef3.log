@@ -1,20 +1,13 @@
-[27816:39816:1010/154236.469:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[27816:33368:1010/154236.526:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
-[27816:39816:1010/154236.556:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[35068:15904:1010/154240.773:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-2014AAECF9B789E988F9AF1744C9E728 will be ignored
-[17812:31424:1010/154241.510:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[17812:24620:1010/154241.564:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[17812:24620:1010/154241.565:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[17812:24620:1010/154241.566:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[27816:16956:1010/154250.742:WARNING:browser_info.cc(345)] Returning a speculative frame for [7,9]
-[27816:39816:1010/154251.087:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[27816:39816:1010/154251.087:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[27816:39816:1010/154251.088:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[27816:39816:1010/154251.088:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[27816:16956:1010/154251.094:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[35420:11988:1010/154252.414:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[35420:2348:1010/154252.448:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[35420:2348:1010/154252.448:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[35420:2348:1010/154252.449:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[35420:11988:1010/154257.590:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[27816:39816:1010/154328.463:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[13492:11664:1010/180111.831:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[13492:29452:1010/180112.422:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
+[13492:11664:1010/180112.603:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[4004:25060:1010/180128.901:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-94C79EA345C54477CE4ABD598C2A929D will be ignored
+[13492:11664:1010/180403.778:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180408.803:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180415.721:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180425.961:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180430.961:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180440.963:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180445.965:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/180547.638:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[13492:11664:1010/184730.799:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

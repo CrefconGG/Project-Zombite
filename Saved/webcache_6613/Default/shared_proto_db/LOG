@@ -1,2 +1,3 @@
-2026/10/10-15:42:39.538 79c0 Creating DB C:\Users\User\Downloads\Project-Zombite\ProjectZombite\Saved\webcache_6613\Default\shared_proto_db since it was missing.
-2026/10/10-15:42:39.601 79c0 Reusing MANIFEST C:\Users\User\Downloads\Project-Zombite\ProjectZombite\Saved\webcache_6613\Default\shared_proto_db/MANIFEST-000001
+2026/10/10-18:01:19.271 730c Reusing MANIFEST C:\Users\User\Downloads\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db/MANIFEST-000001
+2026/10/10-18:01:19.278 730c Recovering log #3
+2026/10/10-18:01:19.280 730c Reusing old log C:\Users\User\Downloads\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db/000003.log 
