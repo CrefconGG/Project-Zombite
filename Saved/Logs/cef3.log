@@ -1,13 +1,9 @@
-[13492:11664:1010/180111.831:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[13492:29452:1010/180112.422:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
-[13492:11664:1010/180112.603:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[4004:25060:1010/180128.901:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-94C79EA345C54477CE4ABD598C2A929D will be ignored
-[13492:11664:1010/180403.778:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180408.803:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180415.721:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180425.961:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180430.961:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180440.963:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180445.965:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/180547.638:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
-[13492:11664:1010/184730.799:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[21132:16440:1014/093806.391:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[21132:16440:1014/093806.453:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[21132:10424:1014/093813.475:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[21132:10424:1014/093813.477:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[21132:10424:1014/093813.479:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[21132:10424:1014/093813.480:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[21132:6028:1014/093814.221:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[21132:6028:1014/093814.223:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[1956:6216:1014/093817.097:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-D92966178FEBAAF9D904C5884F2E54BC will be ignored
