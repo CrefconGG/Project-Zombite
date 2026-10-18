@@ -1,10 +1,30 @@
-[21132:16440:1014/093806.391:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[21132:16440:1014/093806.453:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[21132:10424:1014/093813.475:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[21132:10424:1014/093813.477:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[21132:10424:1014/093813.479:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[21132:10424:1014/093813.480:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[21132:6028:1014/093814.221:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[21132:6028:1014/093814.223:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[1956:6216:1014/093817.097:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-D92966178FEBAAF9D904C5884F2E54BC will be ignored
-[21132:16440:1014/103424.629:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[4424:1520:1018/130208.405:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[4424:1520:1018/130208.806:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[4424:5076:1018/130220.942:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[4424:5076:1018/130220.944:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[4424:5076:1018/130220.947:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[4424:5076:1018/130220.948:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[4424:21824:1018/130224.219:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[4424:21824:1018/130224.221:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20444:2872:1018/130225.217:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-E5FFDC05F64C6832C16812E823425922 will be ignored
+[6588:12588:1018/130227.304:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[6588:6104:1018/130227.346:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[6588:6104:1018/130227.346:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[6588:6104:1018/130227.347:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[4424:14332:1018/130228.225:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
+[4424:1520:1018/130229.216:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
+[4424:1520:1018/130229.216:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
+[4424:1520:1018/130229.216:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
+[4424:1520:1018/130229.216:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
+[4424:14332:1018/130229.220:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
+[20304:1972:1018/130231.546:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:6516:1018/130231.609:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:6516:1018/130231.609:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:6516:1018/130231.609:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:1972:1018/130238.999:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:1972:1018/130239.008:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:6516:1018/130239.012:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:6516:1018/130239.012:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[20304:6516:1018/130239.012:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[4424:1520:1018/133309.622:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[4424:1520:1018/154136.125:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
