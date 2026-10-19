@@ -8,6 +8,7 @@
 
 class UBehaviorTree;
 class UAISenseConfig_Sight;
+class UAISenseConfig_Hearing;
 
 UCLASS()
 class PROJECTZOMBITE_API AZombieAIController : public AAIController
@@ -45,5 +46,11 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Zombie Attack")
 	bool TryBite(AActor* Target);
+	
+	UPROPERTY(VisibleAnywhere, Category = "AI")
+	UAISenseConfig_Hearing* HearingConfig;
+
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
+	FName InvestigateLocationKey = TEXT("InvestigateLocation");
 
 };

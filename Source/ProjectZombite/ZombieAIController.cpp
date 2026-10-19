@@ -1,12 +1,13 @@
 
 #include "ZombieAIController.h"
-
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Perception/AIPerceptionComponent.h"
-#include "Perception/AISenseConfig_Sight.h"
-#include "Perception/AISense_Sight.h"
 #include "Perception/AIPerceptionSystem.h"
+#include "Perception/AISenseConfig_Sight.h"
+#include "Perception/AISenseConfig_Hearing.h"
+#include "Perception/AISense_Sight.h"
+#include "Perception/AISense_Hearing.h"
 #include "Kismet/GameplayStatics.h"
 
 AZombieAIController::AZombieAIController()
@@ -17,6 +18,7 @@ AZombieAIController::AZombieAIController()
         )
     );
 
+    // Sight
     SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(
         TEXT("SightConfig")
     );
@@ -25,13 +27,26 @@ AZombieAIController::AZombieAIController()
     SightConfig->LoseSightRadius = 1500.0f;
     SightConfig->PeripheralVisionAngleDegrees = 60.0f;
 
-    // Prototype uses Actor Tags, not Team IDs.
     SightConfig->DetectionByAffiliation.bDetectEnemies = true;
     SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
     SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
 
     GetPerceptionComponent()->ConfigureSense(*SightConfig);
 
+    // Hearing
+    HearingConfig = CreateDefaultSubobject<UAISenseConfig_Hearing>(
+        TEXT("HearingConfig")
+    );
+
+    HearingConfig->HearingRange = 2000.0f;
+    HearingConfig->SetMaxAge(5.0f);
+
+    HearingConfig->DetectionByAffiliation.bDetectEnemies = true;
+    HearingConfig->DetectionByAffiliation.bDetectNeutrals = true;
+    HearingConfig->DetectionByAffiliation.bDetectFriendlies = true;
+
+    GetPerceptionComponent()->ConfigureSense(*HearingConfig);
+    
     GetPerceptionComponent()->SetDominantSense(
         UAISense_Sight::StaticClass()
     );
@@ -51,10 +66,14 @@ void AZombieAIController::OnPossess(APawn* InPawn)
         RunBehaviorTree(BehaviorTreeAsset);
     }
 
-    GetPerceptionComponent()->OnTargetPerceptionUpdated.AddDynamic(
-        this,
-        &AZombieAIController::OnTargetSensed
-    );
+    if (UAIPerceptionComponent* Perception =
+        GetPerceptionComponent())
+    {
+        Perception->OnTargetPerceptionUpdated.AddDynamic(
+            this,
+            &AZombieAIController::OnTargetSensed
+        );
+    }
 }
 
 void AZombieAIController::OnTargetSensed(
@@ -62,7 +81,7 @@ void AZombieAIController::OnTargetSensed(
     FAIStimulus Stimulus
 )
 {
-    if (!Actor || !Actor->ActorHasTag(TEXT("Human")))
+    if (!IsValid(Actor) || !HasAuthority())
     {
         return;
     }
@@ -76,34 +95,69 @@ void AZombieAIController::OnTargetSensed(
 
     const TSubclassOf<UAISense> Sense =
         UAIPerceptionSystem::GetSenseClassForStimulus(
-            this, Stimulus
+            this,
+            Stimulus
         );
 
-    if (Sense != UAISense_Sight::StaticClass())
+    // Sight
+    if (Sense == UAISense_Sight::StaticClass())
     {
+        if (!Actor->ActorHasTag(TEXT("Human")))
+        {
+            return;
+        }
+
+        if (Stimulus.WasSuccessfullySensed())
+        {
+            BB->SetValueAsObject(TargetActorKey, Actor);
+
+            UE_LOG(LogTemp, Warning,
+                TEXT("Zombie spotted Human: %s"),
+                *GetNameSafe(Actor));
+        }
+        else if (BB->GetValueAsObject(TargetActorKey) == Actor)
+        {
+            BB->ClearValue(TargetActorKey);
+
+            UE_LOG(LogTemp, Warning,
+                TEXT("Zombie lost sight of Human: %s"),
+                *GetNameSafe(Actor));
+        }
+
         return;
     }
 
-    if (Stimulus.WasSuccessfullySensed())
+    // Hearing
+    if (Sense == UAISense_Hearing::StaticClass())
     {
-        BB->SetValueAsObject(TargetActorKey, Actor);
-    }
-    else if (BB->GetValueAsObject(TargetActorKey) == Actor)
-    {
-        BB->ClearValue(TargetActorKey);
+        if (Stimulus.WasSuccessfullySensed())
+        {
+            BB->SetValueAsVector(
+                InvestigateLocationKey,
+                Stimulus.StimulusLocation
+            );
+
+            UE_LOG(LogTemp, Warning,
+                TEXT("Zombie heard noise at %s"),
+                *Stimulus.StimulusLocation.ToString());
+        }
+
+        return;
     }
 }
 
-
+// Bite
 bool AZombieAIController::TryBite(AActor* Target)
 {
-    if (!HasAuthority() || !IsValid(Target) ||
+    if (!HasAuthority() ||
+        !IsValid(Target) ||
         !Target->ActorHasTag(TEXT("Human")))
     {
         return false;
     }
 
     APawn* Zombie = GetPawn();
+
     if (!Zombie)
     {
         return false;
@@ -142,4 +196,3 @@ bool AZombieAIController::TryBite(AActor* Target)
 
     return true;
 }
-
