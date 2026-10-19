@@ -9,6 +9,8 @@
 #include "Perception/AISense_Sight.h"
 #include "Perception/AISense_Hearing.h"
 #include "Kismet/GameplayStatics.h"
+#include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 AZombieAIController::AZombieAIController()
 {
@@ -76,6 +78,7 @@ void AZombieAIController::OnPossess(APawn* InPawn)
     }
 }
 
+
 void AZombieAIController::OnTargetSensed(
     AActor* Actor,
     FAIStimulus Stimulus
@@ -98,6 +101,14 @@ void AZombieAIController::OnTargetSensed(
             this,
             Stimulus
         );
+    
+    auto SetZombieSpeed = [this](float NewSpeed)
+    {
+        if (ACharacter* Zombie = Cast<ACharacter>(GetPawn()))
+        {
+            Zombie->GetCharacterMovement()->MaxWalkSpeed = NewSpeed;
+        }
+    };
 
     // Sight
     if (Sense == UAISense_Sight::StaticClass())
@@ -110,6 +121,8 @@ void AZombieAIController::OnTargetSensed(
         if (Stimulus.WasSuccessfullySensed())
         {
             BB->SetValueAsObject(TargetActorKey, Actor);
+            
+            SetZombieSpeed(600.f);
 
             UE_LOG(LogTemp, Warning,
                 TEXT("Zombie spotted Human: %s"),
@@ -118,6 +131,8 @@ void AZombieAIController::OnTargetSensed(
         else if (BB->GetValueAsObject(TargetActorKey) == Actor)
         {
             BB->ClearValue(TargetActorKey);
+            
+            SetZombieSpeed(200.f);
 
             UE_LOG(LogTemp, Warning,
                 TEXT("Zombie lost sight of Human: %s"),
