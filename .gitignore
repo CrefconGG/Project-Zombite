@@ -44,3 +44,8 @@ Desktop.ini
 # and Build files unless a specific generated path is excluded above.
 
 *.ush
+Saved/Logs/ProjectZombite.log
+*.log
+Saved/webcache_6613/Default/Local Storage/leveldb/LOG
+Saved/webcache_6613/Default/Session Storage/LOG
+Saved/webcache_6613/Default/Site Characteristics Database/LOG
