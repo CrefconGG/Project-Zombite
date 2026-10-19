@@ -20,6 +20,7 @@ public:
 
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
+	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere, Category = "AI")
 	UBehaviorTree* BehaviorTreeAsset;
@@ -43,6 +44,7 @@ protected:
 	float BiteCooldown = 1.5f;
 
 	float LastBiteTime = -1000.0f;
+	void UpdateZombieSpeed();
 
 	UFUNCTION(BlueprintCallable, Category = "Zombie Attack")
 	bool TryBite(AActor* Target);

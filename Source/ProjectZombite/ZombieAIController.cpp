@@ -101,14 +101,6 @@ void AZombieAIController::OnTargetSensed(
             this,
             Stimulus
         );
-    
-    auto SetZombieSpeed = [this](float NewSpeed)
-    {
-        if (ACharacter* Zombie = Cast<ACharacter>(GetPawn()))
-        {
-            Zombie->GetCharacterMovement()->MaxWalkSpeed = NewSpeed;
-        }
-    };
 
     // Sight
     if (Sense == UAISense_Sight::StaticClass())
@@ -121,8 +113,6 @@ void AZombieAIController::OnTargetSensed(
         if (Stimulus.WasSuccessfullySensed())
         {
             BB->SetValueAsObject(TargetActorKey, Actor);
-            
-            SetZombieSpeed(600.f);
 
             UE_LOG(LogTemp, Warning,
                 TEXT("Zombie spotted Human: %s"),
@@ -131,14 +121,13 @@ void AZombieAIController::OnTargetSensed(
         else if (BB->GetValueAsObject(TargetActorKey) == Actor)
         {
             BB->ClearValue(TargetActorKey);
-            
-            SetZombieSpeed(200.f);
 
             UE_LOG(LogTemp, Warning,
                 TEXT("Zombie lost sight of Human: %s"),
                 *GetNameSafe(Actor));
         }
 
+        UpdateZombieSpeed();
         return;
     }
 
@@ -210,4 +199,36 @@ bool AZombieAIController::TryBite(AActor* Target)
         *GetNameSafe(Target));
 
     return true;
+}
+
+void AZombieAIController::UpdateZombieSpeed()
+{
+    UBlackboardComponent* BB = GetBlackboardComponent();
+
+    ACharacter* Zombie = Cast<ACharacter>(GetPawn());
+
+    if (!BB || !Zombie)
+    {
+        return;
+    }
+
+    AActor* Target = Cast<AActor>(
+        BB->GetValueAsObject(TargetActorKey)
+    );
+
+    const bool bIsChasing =
+        IsValid(Target) && Target->ActorHasTag(TEXT("Human"));
+
+    Zombie->GetCharacterMovement()->MaxWalkSpeed =
+        bIsChasing ? 600.f : 200.f;
+}
+
+void AZombieAIController::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    if (HasAuthority())
+    {
+        UpdateZombieSpeed();
+    }
 }
