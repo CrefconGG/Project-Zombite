@@ -1,31 +1,0 @@
-[8812:18688:1019/131336.113:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[8812:18688:1019/131336.175:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[8812:10100:1019/131343.502:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[8812:10100:1019/131343.504:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[8812:10100:1019/131343.506:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[8812:10100:1019/131343.507:WARNING:leveldb_database.cc(141)] Unable to open D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[8812:21300:1019/131345.786:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[8812:21300:1019/131345.788:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[3984:8408:1019/131345.799:ERROR:backend_impl.cc(989)] Critical error found -8
-[3984:8408:1019/131345.799:ERROR:entry_impl.cc(1029)] No file for b2020000
-[3984:8408:1019/131345.800:WARNING:storage_block-inl.h(138)] Failed data load.
-[21084:21396:1019/131346.465:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-13B71FA4D0A787AAD56DFA5900BEDF8C will be ignored
-[16304:13400:1019/131348.650:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[16304:18772:1019/131348.687:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[16304:18772:1019/131348.687:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[16304:18772:1019/131348.688:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[8812:11524:1019/131349.805:WARNING:browser_info.cc(345)] Returning a speculative frame for [7,9]
-[8812:18688:1019/131350.131:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
-[8812:18688:1019/131350.131:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
-[8812:18688:1019/131350.131:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
-[8812:18688:1019/131350.131:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
-[8812:11524:1019/131350.140:WARNING:browser_info.cc(345)] Returning a speculative frame for [9,9]
-[20812:5260:1019/131351.463:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[20812:19256:1019/131351.520:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[20812:19256:1019/131351.520:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[20812:19256:1019/131351.521:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[8812:20540:1019/131355.472:ERROR:sandbox_directory_database.cc(915)] SandboxDirectoryDatabase failed at: Init@storage\browser\file_system\sandbox_directory_database.cc:715 with error: Corruption: 2 missing files; e.g.: D:\Unreal Projects\Project-Zombite\Saved\webcache_6613\Default\WebStorage\1\FileSystem\t\Paths/000004.ldb
-[8812:20540:1019/131355.472:WARNING:sandbox_directory_database.cc(727)] Corrupted SandboxDirectoryDatabase detected. Attempting to repair.
-[8812:20540:1019/131355.479:WARNING:obfuscated_file_util.cc(1236)] A stray file detected
-[20812:5260:1019/131356.538:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
-[8812:18688:1019/131435.095:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
